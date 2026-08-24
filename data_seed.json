@@ -1,0 +1,2740 @@
+[
+  {
+    "masv": "sv001",
+    "hoten": "Phạm Bích Hà",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.7
+      }
+    ]
+  },
+  {
+    "masv": "sv002",
+    "hoten": "Lý Bích Khang",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.9
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.9
+      }
+    ]
+  },
+  {
+    "masv": "sv003",
+    "hoten": "Đỗ Bích Ngọc",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 7.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.3
+      }
+    ]
+  },
+  {
+    "masv": "sv004",
+    "hoten": "Dương Quang Khang",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Nhật",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.9
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.9
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.0
+      }
+    ]
+  },
+  {
+    "masv": "sv005",
+    "hoten": "Bùi Hữu Phương",
+    "tuoi": 20,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.4
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 6.1
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.5
+      }
+    ]
+  },
+  {
+    "masv": "sv006",
+    "hoten": "Lý Thanh Trang",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.8
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.1
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv007",
+    "hoten": "Lê Thanh Anh",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.4
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.6
+      }
+    ]
+  },
+  {
+    "masv": "sv008",
+    "hoten": "Phạm Đức Cường",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.3
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.7
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.6
+      }
+    ]
+  },
+  {
+    "masv": "sv009",
+    "hoten": "Bùi Bích Khang",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.7
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.6
+      }
+    ]
+  },
+  {
+    "masv": "sv010",
+    "hoten": "Lê Ngọc Huy",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.9
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.8
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.3
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.0
+      }
+    ]
+  },
+  {
+    "masv": "sv011",
+    "hoten": "Hoàng Hữu Bình",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.8
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 6.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.8
+      }
+    ]
+  },
+  {
+    "masv": "sv012",
+    "hoten": "Đặng Thanh Ngọc",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.8
+      }
+    ]
+  },
+  {
+    "masv": "sv013",
+    "hoten": "Hoàng Thanh Yến",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.7
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.1
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.5
+      }
+    ]
+  },
+  {
+    "masv": "sv014",
+    "hoten": "Lê Thanh Lan",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.4
+      }
+    ]
+  },
+  {
+    "masv": "sv015",
+    "hoten": "Huỳnh Bích Hải",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.3
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.2
+      }
+    ]
+  },
+  {
+    "masv": "sv016",
+    "hoten": "Ngô Thanh Nghĩa",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.1
+      }
+    ]
+  },
+  {
+    "masv": "sv017",
+    "hoten": "Đặng Thị Thắng",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.0
+      }
+    ]
+  },
+  {
+    "masv": "sv018",
+    "hoten": "Hồ Thị Ngọc",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.1
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 3.4
+      }
+    ]
+  },
+  {
+    "masv": "sv019",
+    "hoten": "Nguyễn Thanh Thắng",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.0
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.8
+      }
+    ]
+  },
+  {
+    "masv": "sv020",
+    "hoten": "Bùi Hữu Ngọc",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.1
+      }
+    ]
+  },
+  {
+    "masv": "sv021",
+    "hoten": "Trần Hữu Minh",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.0
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.7
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 3.5
+      }
+    ]
+  },
+  {
+    "masv": "sv022",
+    "hoten": "Dương Thị Tuấn",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Nhật",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.5
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.0
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.3
+      }
+    ]
+  },
+  {
+    "masv": "sv023",
+    "hoten": "Hoàng Hữu Hoa",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 4.3
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.0
+      }
+    ]
+  },
+  {
+    "masv": "sv024",
+    "hoten": "Hồ Thanh Uyên",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.1
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.9
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.0
+      }
+    ]
+  },
+  {
+    "masv": "sv025",
+    "hoten": "Bùi Thanh Việt",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Hàn",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.2
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.1
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 7.3
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.9
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.7
+      }
+    ]
+  },
+  {
+    "masv": "sv026",
+    "hoten": "Nguyễn Quang Duy",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.7
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.2
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.1
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 8.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.3
+      }
+    ]
+  },
+  {
+    "masv": "sv027",
+    "hoten": "Bùi Quang Vân",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.8
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.5
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.8
+      }
+    ]
+  },
+  {
+    "masv": "sv028",
+    "hoten": "Phạm Ngọc Cường",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.0
+      }
+    ]
+  },
+  {
+    "masv": "sv029",
+    "hoten": "Vũ Thanh Hoa",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Nhật",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.0
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 10.0
+      }
+    ]
+  },
+  {
+    "masv": "sv030",
+    "hoten": "Đặng Hữu Trí",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.4
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 8.6
+      }
+    ]
+  },
+  {
+    "masv": "sv031",
+    "hoten": "Trần Đình Trí",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.7
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 6.5
+      }
+    ]
+  },
+  {
+    "masv": "sv032",
+    "hoten": "Nguyễn Ngọc Tuấn",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.8
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.0
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.3
+      }
+    ]
+  },
+  {
+    "masv": "sv033",
+    "hoten": "Vũ Thanh Uyên",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.1
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.8
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.9
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.0
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.8
+      }
+    ]
+  },
+  {
+    "masv": "sv034",
+    "hoten": "Phạm Thanh An",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.3
+      }
+    ]
+  },
+  {
+    "masv": "sv035",
+    "hoten": "Hoàng Quang Nam",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.3
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.7
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.7
+      }
+    ]
+  },
+  {
+    "masv": "sv036",
+    "hoten": "Hồ Hữu Thắng",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 4.4
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.0
+      }
+    ]
+  },
+  {
+    "masv": "sv037",
+    "hoten": "Đỗ Đức Thảo",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 6.7
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 6.8
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.3
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.6
+      }
+    ]
+  },
+  {
+    "masv": "sv038",
+    "hoten": "Hồ Thanh Lan",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv039",
+    "hoten": "Bùi Văn Tài",
+    "tuoi": 20,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 6.5
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.1
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 4.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.6
+      }
+    ]
+  },
+  {
+    "masv": "sv040",
+    "hoten": "Hoàng Thị Duy",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Anh",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.1
+      }
+    ]
+  },
+  {
+    "masv": "sv041",
+    "hoten": "Hoàng Đức Thảo",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Pháp",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.3
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.0
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.3
+      }
+    ]
+  },
+  {
+    "masv": "sv042",
+    "hoten": "Ngô Ngọc Anh",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.8
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 7.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.6
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.0
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.4
+      }
+    ]
+  },
+  {
+    "masv": "sv043",
+    "hoten": "Trần Thị Hải",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.8
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.4
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 10.0
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.4
+      }
+    ]
+  },
+  {
+    "masv": "sv044",
+    "hoten": "Hồ Bích Hải",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.2
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.8
+      }
+    ]
+  },
+  {
+    "masv": "sv045",
+    "hoten": "Võ Ngọc Tuấn",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 10.0
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.5
+      }
+    ]
+  },
+  {
+    "masv": "sv046",
+    "hoten": "Nguyễn Đức Trang",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.2
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.0
+      }
+    ]
+  },
+  {
+    "masv": "sv047",
+    "hoten": "Vũ Thị Duy",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.2
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.8
+      }
+    ]
+  },
+  {
+    "masv": "sv048",
+    "hoten": "Đỗ Thanh Tuấn",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.4
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.5
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.3
+      }
+    ]
+  },
+  {
+    "masv": "sv049",
+    "hoten": "Hồ Văn Mai",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.2
+      }
+    ]
+  },
+  {
+    "masv": "sv050",
+    "hoten": "Ngô Thị Bình",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.6
+      }
+    ]
+  },
+  {
+    "masv": "sv051",
+    "hoten": "Trần Thị Ngọc",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.3
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.8
+      }
+    ]
+  },
+  {
+    "masv": "sv052",
+    "hoten": "Nguyễn Bích Nghĩa",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.8
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.1
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 9.2
+      }
+    ]
+  },
+  {
+    "masv": "sv053",
+    "hoten": "Võ Bích Đức",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.8
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.8
+      }
+    ]
+  },
+  {
+    "masv": "sv054",
+    "hoten": "Dương Văn Tuấn",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 9.7
+      }
+    ]
+  },
+  {
+    "masv": "sv055",
+    "hoten": "Bùi Thanh Lan",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Hàn",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 3.5
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.5
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 6.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.6
+      }
+    ]
+  },
+  {
+    "masv": "sv056",
+    "hoten": "Huỳnh Hữu Phát",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.1
+      }
+    ]
+  },
+  {
+    "masv": "sv057",
+    "hoten": "Phan Thị Nam",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv058",
+    "hoten": "Bùi Bích Cường",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Trung",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 6.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.5
+      }
+    ]
+  },
+  {
+    "masv": "sv059",
+    "hoten": "Dương Đức Phương",
+    "tuoi": 20,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.7
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv060",
+    "hoten": "Trần Ngọc Lan",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 8.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.8
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.5
+      }
+    ]
+  },
+  {
+    "masv": "sv061",
+    "hoten": "Phạm Quang Thắng",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Nhật",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.2
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.5
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 6.7
+      }
+    ]
+  },
+  {
+    "masv": "sv062",
+    "hoten": "Lê Quang Nam",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.1
+      }
+    ]
+  },
+  {
+    "masv": "sv063",
+    "hoten": "Phan Đình Hải",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.9
+      }
+    ]
+  },
+  {
+    "masv": "sv064",
+    "hoten": "Đặng Bích Huy",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Pháp",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.8
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.5
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.5
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.4
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.8
+      }
+    ]
+  },
+  {
+    "masv": "sv065",
+    "hoten": "Huỳnh Quang Trí",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.3
+      }
+    ]
+  },
+  {
+    "masv": "sv066",
+    "hoten": "Ngô Quang Trí",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Anh",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 6.7
+      }
+    ]
+  },
+  {
+    "masv": "sv067",
+    "hoten": "Hồ Đình Quỳnh",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 4.5
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.9
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 9.9
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.8
+      }
+    ]
+  },
+  {
+    "masv": "sv068",
+    "hoten": "Vũ Văn Quỳnh",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.1
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.3
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.7
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.5
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.5
+      }
+    ]
+  },
+  {
+    "masv": "sv069",
+    "hoten": "Hồ Bích Lan",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.2
+      }
+    ]
+  },
+  {
+    "masv": "sv070",
+    "hoten": "Đặng Đức Trí",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.2
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.2
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 9.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.6
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 3.4
+      }
+    ]
+  },
+  {
+    "masv": "sv071",
+    "hoten": "Lê Bích Minh",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 6.7
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.5
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.6
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv072",
+    "hoten": "Dương Thị Thắng",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 5.6
+      }
+    ]
+  },
+  {
+    "masv": "sv073",
+    "hoten": "Dương Ngọc Hải",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.7
+      }
+    ]
+  },
+  {
+    "masv": "sv074",
+    "hoten": "Vũ Quang Hà",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.0
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.1
+      }
+    ]
+  },
+  {
+    "masv": "sv075",
+    "hoten": "Phạm Đình Cường",
+    "tuoi": 18,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.1
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.2
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.4
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.3
+      }
+    ]
+  },
+  {
+    "masv": "sv076",
+    "hoten": "Hồ Ngọc An",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.5
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.5
+      }
+    ]
+  },
+  {
+    "masv": "sv077",
+    "hoten": "Lý Văn Trí",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.3
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.9
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.2
+      }
+    ]
+  },
+  {
+    "masv": "sv078",
+    "hoten": "Võ Quang Nghĩa",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.0
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.6
+      }
+    ]
+  },
+  {
+    "masv": "sv079",
+    "hoten": "Huỳnh Bích Khang",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.3
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 6.2
+      }
+    ]
+  },
+  {
+    "masv": "sv080",
+    "hoten": "Đặng Bích Phương",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Pháp",
+      "Tiếng Trung",
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 7.4
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.0
+      }
+    ]
+  },
+  {
+    "masv": "sv081",
+    "hoten": "Nguyễn Thị Khang",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.0
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.8
+      }
+    ]
+  },
+  {
+    "masv": "sv082",
+    "hoten": "Hồ Đức Minh",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.4
+      }
+    ]
+  },
+  {
+    "masv": "sv083",
+    "hoten": "Hoàng Quang Phát",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "HTTT1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.2
+      }
+    ]
+  },
+  {
+    "masv": "sv084",
+    "hoten": "Hoàng Bích Hương",
+    "tuoi": 23,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.2
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.6
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.5
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 8.8
+      }
+    ]
+  },
+  {
+    "masv": "sv085",
+    "hoten": "Phạm Đức Cường",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.0
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 7.2
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.2
+      }
+    ]
+  },
+  {
+    "masv": "sv086",
+    "hoten": "Hoàng Hữu Mai",
+    "tuoi": 22,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.7
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.3
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 9.0
+      }
+    ]
+  },
+  {
+    "masv": "sv087",
+    "hoten": "Lê Bích Quỳnh",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.1
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.3
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.3
+      }
+    ]
+  },
+  {
+    "masv": "sv088",
+    "hoten": "Đặng Văn Nam",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 6.2
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 5.6
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.5
+      }
+    ]
+  },
+  {
+    "masv": "sv089",
+    "hoten": "Bùi Bích Bình",
+    "tuoi": 19,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 7.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.6
+      }
+    ]
+  },
+  {
+    "masv": "sv090",
+    "hoten": "Đỗ Bích Cường",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 3.6
+      }
+    ]
+  },
+  {
+    "masv": "sv091",
+    "hoten": "Hoàng Thanh Yến",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 7.0
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 9.1
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.5
+      }
+    ]
+  },
+  {
+    "masv": "sv092",
+    "hoten": "Ngô Hữu Bình",
+    "tuoi": 20,
+    "phai": "Nam",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Anh",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.9
+      }
+    ]
+  },
+  {
+    "masv": "sv093",
+    "hoten": "Lê Đức Trí",
+    "tuoi": 19,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Pháp",
+      "Tiếng Anh"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.0
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.7
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 6.9
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 5.7
+      }
+    ]
+  },
+  {
+    "masv": "sv094",
+    "hoten": "Phạm Thanh Hải",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.1
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.4
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.3
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.9
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.6
+      }
+    ]
+  },
+  {
+    "masv": "sv095",
+    "hoten": "Hồ Hữu Anh",
+    "tuoi": 21,
+    "phai": "Nam",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Hàn",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.8
+      }
+    ]
+  },
+  {
+    "masv": "sv096",
+    "hoten": "Võ Bích Thảo",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "KTPM1",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Pháp",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.1
+      }
+    ]
+  },
+  {
+    "masv": "sv097",
+    "hoten": "Phan Bích Yến",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Nhật"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.6
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 3.0
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.5
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 8.3
+      }
+    ]
+  },
+  {
+    "masv": "sv098",
+    "hoten": "Phan Văn Hà",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Hàn",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 4.2
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 7.0
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.0
+      }
+    ]
+  },
+  {
+    "masv": "sv099",
+    "hoten": "Bùi Quang Bình",
+    "tuoi": 23,
+    "phai": "Nam",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Hàn"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 9.4
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 5.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.7
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.6
+      }
+    ]
+  },
+  {
+    "masv": "sv100",
+    "hoten": "Võ Thanh An",
+    "tuoi": 20,
+    "phai": "Nữ",
+    "malop": "CNTT2",
+    "ngoaingu": [
+      "Tiếng Nhật",
+      "Tiếng Hàn",
+      "Tiếng Trung"
+    ],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 4.8
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 8.1
+      }
+    ]
+  },
+  {
+    "masv": "sv101",
+    "hoten": "Đỗ Ngọc Lan",
+    "tuoi": 22,
+    "phai": "Nữ",
+    "malop": "HTTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 9.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 6.6
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 5.3
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 7.6
+      }
+    ]
+  },
+  {
+    "masv": "sv102",
+    "hoten": "Võ Bích Lan",
+    "tuoi": 18,
+    "phai": "Nữ",
+    "malop": "CNTT1",
+    "ngoaingu": [],
+    "monhoc": [
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.2
+      },
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.3
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 3.6
+      },
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 8.2
+      }
+    ]
+  },
+  {
+    "masv": "sv103",
+    "hoten": "Đỗ Bích Duy",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KTPM2",
+    "ngoaingu": [
+      "Tiếng Anh",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "mang",
+        "tenmon": "Mạng máy tính",
+        "diem": 6.3
+      }
+    ]
+  },
+  {
+    "masv": "sv104",
+    "hoten": "Bùi Bích Thảo",
+    "tuoi": 21,
+    "phai": "Nữ",
+    "malop": "KHMT1",
+    "ngoaingu": [
+      "Tiếng Trung",
+      "Tiếng Nhật",
+      "Tiếng Pháp"
+    ],
+    "monhoc": [
+      {
+        "mamon": "laptrinh",
+        "tenmon": "Lập trình Cơ bản",
+        "diem": 4.6
+      },
+      {
+        "mamon": "csdl",
+        "tenmon": "Cơ sở dữ liệu",
+        "diem": 6.9
+      },
+      {
+        "mamon": "hdt",
+        "tenmon": "Lập trình Hướng đối tượng",
+        "diem": 8.9
+      },
+      {
+        "mamon": "ctdl",
+        "tenmon": "Cấu trúc Dữ liệu",
+        "diem": 9.9
+      }
+    ]
+  }
+]
