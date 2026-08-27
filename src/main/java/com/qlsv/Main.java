@@ -25,7 +25,7 @@ public class Main {
         } catch (Exception ex) {
             System.err.println("Không thể khởi tạo FlatLaf");
         }
-        
+
         // Khởi tạo kết nối MongoDB (Singleton) ngay khi chạy để tạo Index
         MongoDbConnection.getInstance();
 
@@ -37,7 +37,7 @@ public class Main {
             MainFrame frame = new MainFrame();
             frame.setVisible(true);
         });
-        
+
         // Đảm bảo đóng kết nối khi tắt app
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             MongoDbConnection.getInstance().close();
