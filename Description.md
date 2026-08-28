@@ -2,7 +2,7 @@
 
 > * **Công nghệ phát triển:** Java. 
 > * **Cơ sở dữ liệu:** MongoDB (Phiên bản 5.0 trở lên hoặc MongoDB Atlas).  
-> * **Hình thức làm việc:** Cá nhân.
+> * **Hình thức làm việc:** Nhóm
 
 ## **I. THIẾT KẾ CSDL & CẤU TRÚC DOCUMENT**
 
