@@ -65,6 +65,37 @@ public class SinhVienDAO {
     }
 
     /**
+     * Tìm kiếm sinh viên gần đúng (theo masv, hoten, malop) và sắp xếp
+     * @param keyword Từ khóa tìm kiếm
+     * @param sortType Kiểu sắp xếp (Mặc định, Mã SV, Họ tên, Lớp)
+     */
+    public List<Document> searchSinhVien(String keyword, String sortType) {
+        Bson filter = new Document();
+        if (keyword != null && !keyword.trim().isEmpty()) {
+            filter = Filters.or(
+                    Filters.regex("masv", keyword, "i"),
+                    Filters.regex("hoten", keyword, "i"),
+                    Filters.regex("malop", keyword, "i")
+            );
+        }
+        
+        Bson sort = null;
+        if ("Mã SV".equals(sortType)) {
+            sort = Sorts.ascending("masv");
+        } else if ("Họ tên".equals(sortType)) {
+            sort = Sorts.ascending("hoten");
+        } else if ("Lớp".equals(sortType)) {
+            sort = Sorts.ascending("malop");
+        }
+        
+        if (sort != null) {
+            return collection.find(filter).sort(sort).into(new ArrayList<>());
+        } else {
+            return collection.find(filter).into(new ArrayList<>());
+        }
+    }
+
+    /**
      * Cập nhật thông tin cơ bản: Họ tên, Tuổi, Giới tính, Mã lớp
      * @param masv Mã sinh viên
      * @param hoten Họ tên mới
@@ -117,6 +148,29 @@ public class SinhVienDAO {
     }
 
     /**
+     * Sửa một ngoại ngữ trong mảng ngoaingu
+     */
+    public boolean updateNgoaiNgu(String masv, String oldNgoaiNgu, String newNgoaiNgu) {
+        Bson filter = Filters.and(
+                Filters.eq("masv", masv),
+                Filters.eq("ngoaingu", oldNgoaiNgu)
+        );
+        Bson update = Updates.set("ngoaingu.$", newNgoaiNgu);
+        UpdateResult result = collection.updateOne(filter, update);
+        return result.getModifiedCount() > 0;
+    }
+
+    /**
+     * Xóa một ngoại ngữ trong mảng ngoaingu ($pull)
+     */
+    public boolean deleteNgoaiNgu(String masv, String ngoaingu) {
+        Bson filter = Filters.eq("masv", masv);
+        Bson update = Updates.pull("ngoaingu", ngoaingu);
+        UpdateResult result = collection.updateOne(filter, update);
+        return result.getModifiedCount() > 0;
+    }
+
+    /**
      * Thêm một môn học mới vào mảng monhoc ($push)
      */
     public boolean addMonHoc(String masv, Document monhocDoc) {
@@ -137,6 +191,32 @@ public class SinhVienDAO {
         );
         // Cập nhật giá trị điểm của môn học đó bằng Positional Operator
         Bson update = Updates.set("monhoc.$.diem", diemMoi);
+        UpdateResult result = collection.updateOne(filter, update);
+        return result.getModifiedCount() > 0;
+    }
+
+    /**
+     * Sửa tên môn và điểm của môn học
+     */
+    public boolean updateMonHoc(String masv, String mamon, String tenmonMoi, double diemMoi) {
+        Bson filter = Filters.and(
+                Filters.eq("masv", masv),
+                Filters.eq("monhoc.mamon", mamon)
+        );
+        Bson update = Updates.combine(
+                Updates.set("monhoc.$.tenmon", tenmonMoi),
+                Updates.set("monhoc.$.diem", diemMoi)
+        );
+        UpdateResult result = collection.updateOne(filter, update);
+        return result.getModifiedCount() > 0;
+    }
+
+    /**
+     * Xóa một môn học trong mảng monhoc ($pull)
+     */
+    public boolean deleteMonHoc(String masv, String mamon) {
+        Bson filter = Filters.eq("masv", masv);
+        Bson update = Updates.pull("monhoc", new Document("mamon", mamon));
         UpdateResult result = collection.updateOne(filter, update);
         return result.getModifiedCount() > 0;
     }
@@ -304,5 +384,40 @@ public class SinhVienDAO {
         stats.put("Trung bình", trungBinh);
         stats.put("Yếu", yeu);
         return stats;
+    }
+
+    /**
+     * Thống kê theo mã môn và tên môn (Sử dụng unwind, match, group, project)
+     * @param keyword Từ khóa tìm kiếm (có thể là mã môn, tên môn, hoặc để rỗng để lấy tất cả)
+     */
+    public List<Document> getThongKeMaMonVaTenMon(String keyword) {
+        Bson matchCondition;
+        if (keyword != null && !keyword.trim().isEmpty()) {
+            matchCondition = Filters.or(
+                    Filters.regex("monhoc.mamon", keyword, "i"),
+                    Filters.regex("monhoc.tenmon", keyword, "i")
+            );
+        } else {
+            // Match cơ bản để đảm bảo môn học tồn tại
+            matchCondition = Filters.exists("monhoc.mamon");
+        }
+
+        List<Bson> pipeline = Arrays.asList(
+                Aggregates.unwind("$monhoc"),
+                Aggregates.match(matchCondition),
+                Aggregates.group(
+                        new Document("mamon", "$monhoc.mamon").append("tenmon", "$monhoc.tenmon"),
+                        Accumulators.sum("soLuongSinhVien", 1),
+                        Accumulators.avg("diemTrungBinh", "$monhoc.diem")
+                ),
+                Aggregates.project(Projections.fields(
+                        Projections.computed("mamon", "$_id.mamon"),
+                        Projections.computed("tenmon", "$_id.tenmon"),
+                        Projections.include("soLuongSinhVien", "diemTrungBinh"),
+                        Projections.excludeId()
+                )),
+                Aggregates.sort(Sorts.ascending("mamon"))
+        );
+        return collection.aggregate(pipeline).into(new ArrayList<>());
     }
 }

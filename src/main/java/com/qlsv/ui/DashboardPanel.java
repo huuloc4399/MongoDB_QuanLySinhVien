@@ -23,7 +23,7 @@ public class DashboardPanel extends JPanel {
 
     // KPI Labels
     private JLabel lblTotalStudents, lblTotalClasses, lblAvgScore, lblGenderRatio;
-    
+
     // Tables
     private JTable tblClassStats, tblTopStudents, tblHocLuc;
 
@@ -52,15 +52,15 @@ public class DashboardPanel extends JPanel {
                 refreshData();
             }
         });
-        
+
         // --- 1. THẺ CHỈ SỐ TỔNG QUAN (KPI Cards) ---
         JPanel kpiPanel = new JPanel(new GridLayout(1, 4, 15, 0));
-        
+
         lblTotalStudents = createKpiCard("Tổng SV", "0");
         lblTotalClasses = createKpiCard("Tổng Lớp", "0");
         lblAvgScore = createKpiCard("Điểm TB", "0.0");
         lblGenderRatio = createKpiCard("Tỉ lệ Nam/Nữ", "0/0");
-        
+
         kpiPanel.add(lblTotalStudents.getParent());
         kpiPanel.add(lblTotalClasses.getParent());
         kpiPanel.add(lblAvgScore.getParent());
@@ -76,7 +76,7 @@ public class DashboardPanel extends JPanel {
         JPanel centerPanel = new JPanel(new GridLayout(3, 2, 15, 15));
 
         // Bảng 1: Top 5 Sinh viên
-        tblTopStudents = new JTable(new DefaultTableModel(new Object[]{"Mã SV", "Họ tên", "Lớp", "Điểm TB"}, 0));
+        tblTopStudents = new JTable(new DefaultTableModel(new Object[] { "Mã SV", "Họ tên", "Lớp", "Điểm TB" }, 0));
         centerPanel.add(createTablePanel("Top 5 Sinh viên điểm cao nhất", tblTopStudents));
 
         // Biểu đồ 1: Tỉ lệ Nam/Nữ
@@ -86,19 +86,22 @@ public class DashboardPanel extends JPanel {
         centerPanel.add(panelPieChart);
 
         // Bảng 2: Thống kê theo lớp (Luôn hiện toàn bộ lớp)
-        tblClassStats = new JTable(new DefaultTableModel(new Object[]{"Mã Lớp", "Sĩ số", "ĐTB Cao nhất", "ĐTB Thấp nhất"}, 0));
+        tblClassStats = new JTable(
+                new DefaultTableModel(new Object[] { "Mã Lớp", "Sĩ số", "ĐTB Cao nhất", "ĐTB Thấp nhất" }, 0));
         centerPanel.add(createTablePanel("Thống kê theo Lớp", tblClassStats));
 
         // Biểu đồ 2: Ngoại ngữ phổ biến
-        barChartLang = new CategoryChartBuilder().width(400).height(300).title("Ngoại ngữ phổ biến").xAxisTitle("Ngoại ngữ").yAxisTitle("Số lượng").build();
+        barChartLang = new CategoryChartBuilder().width(400).height(300).title("Ngoại ngữ phổ biến")
+                .xAxisTitle("Ngoại ngữ").yAxisTitle("Số lượng").build();
         barChartLang.getStyler().setLegendPosition(Styler.LegendPosition.InsideNW);
+        // barChartLang.getStyler().setHasAnnotations(true); // Hiển thị số ở giữa cột
         panelBarChart = new XChartPanel<>(barChartLang);
         centerPanel.add(panelBarChart);
 
         // Bảng 3: Phân loại học lực
-        tblHocLuc = new JTable(new DefaultTableModel(new Object[]{"Học lực", "Số lượng"}, 0));
+        tblHocLuc = new JTable(new DefaultTableModel(new Object[] { "Học lực", "Số lượng" }, 0));
         centerPanel.add(createTablePanel("Phân loại học lực", tblHocLuc));
-        
+
         // Panel trống để lấp đầy GridLayout
         JPanel emptyPanel = new JPanel();
         emptyPanel.setOpaque(false);
@@ -111,8 +114,7 @@ public class DashboardPanel extends JPanel {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1, true),
-                BorderFactory.createEmptyBorder(15, 15, 15, 15)
-        ));
+                BorderFactory.createEmptyBorder(15, 15, 15, 15)));
         panel.setBackground(Color.WHITE);
 
         JLabel lblTitle = new JLabel(title, SwingConstants.CENTER);
@@ -125,7 +127,7 @@ public class DashboardPanel extends JPanel {
 
         panel.add(lblTitle, BorderLayout.NORTH);
         panel.add(lblValue, BorderLayout.CENTER);
-        
+
         return lblValue;
     }
 
@@ -139,26 +141,26 @@ public class DashboardPanel extends JPanel {
 
     public void updateFilterOptions() {
         String current = (String) cbClassFilter.getSelectedItem();
-        
+
         // Remove action listener temporarily to prevent multiple refreshData calls
         java.awt.event.ActionListener[] listeners = cbClassFilter.getActionListeners();
         for (java.awt.event.ActionListener l : listeners) {
             cbClassFilter.removeActionListener(l);
         }
-        
+
         cbClassFilter.removeAllItems();
         cbClassFilter.addItem("Tất cả");
         List<String> classes = dao.getAllClasses();
         for (String c : classes) {
             cbClassFilter.addItem(c);
         }
-        
+
         if (current != null && classes.contains(current)) {
             cbClassFilter.setSelectedItem(current);
         } else {
             cbClassFilter.setSelectedIndex(0);
         }
-        
+
         // Restore action listener
         for (java.awt.event.ActionListener l : listeners) {
             cbClassFilter.addActionListener(l);
@@ -169,7 +171,8 @@ public class DashboardPanel extends JPanel {
 
     // --- HÀM CẬP NHẬT DỮ LIỆU ---
     public void refreshData() {
-        if (isUpdatingFilter) return;
+        if (isUpdatingFilter)
+            return;
 
         if (cbClassFilter.getItemCount() == 0) {
             isUpdatingFilter = true;
@@ -178,28 +181,32 @@ public class DashboardPanel extends JPanel {
         }
 
         String selectedClass = (String) cbClassFilter.getSelectedItem();
-        if (selectedClass == null) selectedClass = "Tất cả";
+        if (selectedClass == null)
+            selectedClass = "Tất cả";
 
         // 1. Cập nhật KPI
         lblTotalStudents.setText(String.valueOf(dao.countTotalSinhVien(selectedClass)));
         lblTotalClasses.setText(String.valueOf(dao.countTotalClasses()));
         lblAvgScore.setText(String.format("%.2f", dao.getDiemTrungBinh(selectedClass)));
-        
+
         Document ratio = dao.getTiLeNamNu(selectedClass);
         int nam = ratio.getInteger("Nam") != null ? ratio.getInteger("Nam") : 0;
         int nu = ratio.getInteger("Nữ") != null ? ratio.getInteger("Nữ") : 0;
         int total = nam + nu;
         if (total > 0) {
-            lblGenderRatio.setText(String.format("%d%% / %d%%", (nam*100)/total, (nu*100)/total));
+            lblGenderRatio.setText(String.format("%d%% / %d%%", (nam * 100) / total, (nu * 100) / total));
         } else {
             lblGenderRatio.setText("0% / 0%");
         }
 
         // 2. Cập nhật biểu đồ Tròn (PieChart - Nam/Nữ)
         pieChartGender.getSeriesMap().clear();
-        if (nam > 0) pieChartGender.addSeries("Nam", nam);
-        if (nu > 0) pieChartGender.addSeries("Nữ", nu);
-        if (nam == 0 && nu == 0) pieChartGender.addSeries("Không có dữ liệu", 1);
+        if (nam > 0)
+            pieChartGender.addSeries("Nam", nam);
+        if (nu > 0)
+            pieChartGender.addSeries("Nữ", nu);
+        if (nam == 0 && nu == 0)
+            pieChartGender.addSeries("Không có dữ liệu", 1);
         panelPieChart.revalidate();
         panelPieChart.repaint();
 
@@ -226,7 +233,7 @@ public class DashboardPanel extends JPanel {
         modelTop.setRowCount(0);
         List<Document> topStudents = dao.getTop5SinhVien(selectedClass);
         for (Document doc : topStudents) {
-            modelTop.addRow(new Object[]{
+            modelTop.addRow(new Object[] {
                     doc.getString("masv"),
                     doc.getString("hoten"),
                     doc.getString("malop"),
@@ -239,7 +246,7 @@ public class DashboardPanel extends JPanel {
         modelClass.setRowCount(0);
         List<Document> classStats = dao.getThongKeTheoLop();
         for (Document doc : classStats) {
-            modelClass.addRow(new Object[]{
+            modelClass.addRow(new Object[] {
                     doc.getString("_id"),
                     doc.getInteger("siso"),
                     doc.get("diemTBCaoNhat") != null ? String.format("%.2f", doc.getDouble("diemTBCaoNhat")) : "0",
@@ -251,10 +258,10 @@ public class DashboardPanel extends JPanel {
         DefaultTableModel modelHocLuc = (DefaultTableModel) tblHocLuc.getModel();
         modelHocLuc.setRowCount(0);
         Document hlStats = dao.getPhanLoaiHocLuc(selectedClass);
-        modelHocLuc.addRow(new Object[]{"Xuất sắc (>= 9.0)", hlStats.getInteger("Xuất sắc")});
-        modelHocLuc.addRow(new Object[]{"Giỏi (8.0 - 8.9)", hlStats.getInteger("Giỏi")});
-        modelHocLuc.addRow(new Object[]{"Khá (7.0 - 7.9)", hlStats.getInteger("Khá")});
-        modelHocLuc.addRow(new Object[]{"Trung bình (5.0 - 6.9)", hlStats.getInteger("Trung bình")});
-        modelHocLuc.addRow(new Object[]{"Yếu (< 5.0)", hlStats.getInteger("Yếu")});
+        modelHocLuc.addRow(new Object[] { "Xuất sắc (>= 9.0)", hlStats.getInteger("Xuất sắc") });
+        modelHocLuc.addRow(new Object[] { "Giỏi (8.0 - 8.9)", hlStats.getInteger("Giỏi") });
+        modelHocLuc.addRow(new Object[] { "Khá (7.0 - 7.9)", hlStats.getInteger("Khá") });
+        modelHocLuc.addRow(new Object[] { "Trung bình (5.0 - 6.9)", hlStats.getInteger("Trung bình") });
+        modelHocLuc.addRow(new Object[] { "Yếu (< 5.0)", hlStats.getInteger("Yếu") });
     }
 }

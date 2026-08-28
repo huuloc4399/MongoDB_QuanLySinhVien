@@ -28,7 +28,6 @@ public class Main {
 
         // Khởi tạo kết nối MongoDB (Singleton) ngay khi chạy để tạo Index
         MongoDbConnection.getInstance();
-
         // Optional: Import dữ liệu seed nếu collection trống
         seedDataIfEmpty();
 

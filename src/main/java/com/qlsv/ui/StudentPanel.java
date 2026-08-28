@@ -17,11 +17,12 @@ public class StudentPanel extends JPanel {
 
     // Form fields
     private JTextField txtMaSV, txtHoTen, txtTuoi, txtMaLop, txtSearch;
-    private JComboBox<String> cbPhai;
+    private JComboBox<String> cbPhai, cbSort;
     
     // Buttons
     private JButton btnAdd, btnUpdate, btnDelete, btnDeleteByClass;
-    private JButton btnAddLanguage, btnAddSubject, btnUpdateSubject;
+    private JButton btnAddLanguage, btnUpdateLanguage, btnDeleteLanguage;
+    private JButton btnAddSubject, btnUpdateSubject, btnDeleteSubject;
     private JButton btnSearch, btnRefresh;
 
     public StudentPanel() {
@@ -76,13 +77,19 @@ public class StudentPanel extends JPanel {
         // Nút tính năng mảng động
         JPanel arrayBtnPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         arrayBtnPanel.setBorder(BorderFactory.createTitledBorder("Mảng Động & Nâng cao"));
-        btnAddLanguage = new JButton("[+] Thêm Ngoại ngữ");
-        btnAddSubject = new JButton("[+] Thêm Môn học");
-        btnUpdateSubject = new JButton("Sửa Điểm Môn");
+        btnAddLanguage = new JButton("Thêm NN");
+        btnUpdateLanguage = new JButton("Sửa NN");
+        btnDeleteLanguage = new JButton("Xóa NN");
+        btnAddSubject = new JButton("Thêm Môn");
+        btnUpdateSubject = new JButton("Sửa Môn");
+        btnDeleteSubject = new JButton("Xóa Môn");
         
         arrayBtnPanel.add(btnAddLanguage);
+        arrayBtnPanel.add(btnUpdateLanguage);
+        arrayBtnPanel.add(btnDeleteLanguage);
         arrayBtnPanel.add(btnAddSubject);
         arrayBtnPanel.add(btnUpdateSubject);
+        arrayBtnPanel.add(btnDeleteSubject);
         
         JPanel controlPanel = new JPanel(new BorderLayout());
         controlPanel.add(btnPanel, BorderLayout.NORTH);
@@ -98,11 +105,14 @@ public class StudentPanel extends JPanel {
         
         // Thanh tìm kiếm
         JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        txtSearch = new JTextField(20);
-        btnSearch = new JButton("Tìm/Lọc theo Lớp/Mã");
+        txtSearch = new JTextField(15);
+        cbSort = new JComboBox<>(new String[]{"Mặc định", "Mã SV", "Họ tên", "Lớp"});
+        btnSearch = new JButton("Tìm kiếm");
         btnRefresh = new JButton("Làm mới bảng");
-        searchPanel.add(new JLabel("Tìm kiếm (Mã SV hoặc Mã Lớp):"));
+        searchPanel.add(new JLabel("Tìm kiếm (Gần đúng):"));
         searchPanel.add(txtSearch);
+        searchPanel.add(new JLabel("Sắp xếp theo:"));
+        searchPanel.add(cbSort);
         searchPanel.add(btnSearch);
         searchPanel.add(btnRefresh);
         
@@ -129,6 +139,16 @@ public class StudentPanel extends JPanel {
             }
         });
         
+        // Căn chỉnh độ rộng cột
+        table.getColumnModel().getColumn(0).setPreferredWidth(70);  // Mã SV
+        table.getColumnModel().getColumn(1).setPreferredWidth(160); // Họ tên
+        table.getColumnModel().getColumn(2).setPreferredWidth(50);  // Tuổi
+        table.getColumnModel().getColumn(3).setPreferredWidth(70);  // Giới tính
+        table.getColumnModel().getColumn(4).setPreferredWidth(80);  // Lớp
+        table.getColumnModel().getColumn(5).setPreferredWidth(130); // Ngoại ngữ
+        table.getColumnModel().getColumn(6).setPreferredWidth(350); // Môn học (Điểm)
+
+        
         JScrollPane scrollPane = new JScrollPane(table);
         bottomPanel.add(scrollPane, BorderLayout.CENTER);
 
@@ -145,8 +165,11 @@ public class StudentPanel extends JPanel {
         btnDeleteByClass.addActionListener(e -> deleteByClass());
         
         btnAddLanguage.addActionListener(e -> addLanguage());
+        btnUpdateLanguage.addActionListener(e -> updateLanguage());
+        btnDeleteLanguage.addActionListener(e -> deleteLanguage());
         btnAddSubject.addActionListener(e -> addSubject());
-        btnUpdateSubject.addActionListener(e -> updateSubjectScore());
+        btnUpdateSubject.addActionListener(e -> updateSubject());
+        btnDeleteSubject.addActionListener(e -> deleteSubject());
         
         btnSearch.addActionListener(e -> searchData());
         btnRefresh.addActionListener(e -> refreshTable());
@@ -155,7 +178,9 @@ public class StudentPanel extends JPanel {
     // --- CÁC HÀM XỬ LÝ SỰ KIỆN ---
 
     public void refreshTable() {
-        List<Document> docs = dao.getAllSinhVien();
+        if (txtSearch != null) txtSearch.setText("");
+        if (cbSort != null) cbSort.setSelectedIndex(0);
+        List<Document> docs = dao.searchSinhVien("", "Mặc định");
         loadDataToTable(docs);
     }
 
@@ -168,17 +193,34 @@ public class StudentPanel extends JPanel {
             String phai = doc.getString("phai");
             String malop = doc.getString("malop");
             
-            // Xử lý hiển thị mảng ngoại ngữ
+            // Xử lý hiển thị mảng ngoại ngữ (định dạng đẹp)
             List<String> ngoaingu = doc.getList("ngoaingu", String.class);
-            String nnStr = (ngoaingu != null) ? String.join(", ", ngoaingu) : "";
+            String nnStr = "";
+            if (ngoaingu != null && !ngoaingu.isEmpty()) {
+                nnStr = "<html><font color='#E67E22'><b>" + String.join("</b>, <b>", ngoaingu) + "</b></font></html>";
+            }
             
-            // Xử lý hiển thị mảng môn học
+            // Xử lý hiển thị mảng môn học (định dạng HTML đẹp)
             List<Document> monhoc = doc.getList("monhoc", Document.class);
             StringBuilder mhStr = new StringBuilder();
-            if (monhoc != null) {
-                for (Document mh : monhoc) {
-                    mhStr.append(mh.getString("tenmon")).append("(").append(mh.get("diem")).append("); ");
+            if (monhoc != null && !monhoc.isEmpty()) {
+                mhStr.append("<html>");
+                for (int i = 0; i < monhoc.size(); i++) {
+                    Document mh = monhoc.get(i);
+                    Object diemObj = mh.get("diem");
+                    double diem = (diemObj instanceof Number) ? ((Number) diemObj).doubleValue() : 0.0;
+                    
+                    // Điểm dưới 5 thì màu đỏ, từ 5 trở lên thì màu xanh
+                    String color = (diem >= 5.0) ? "#27AE60" : "#E74C3C";
+                    
+                    mhStr.append("<b>").append(mh.getString("tenmon")).append("</b>: ")
+                         .append("<font color='").append(color).append("'>").append(diem).append("</font>");
+                    
+                    if (i < monhoc.size() - 1) {
+                        mhStr.append(" &nbsp;|&nbsp; ");
+                    }
                 }
+                mhStr.append("</html>");
             }
             
             tableModel.addRow(new Object[]{masv, hoten, tuoi, phai, malop, nnStr, mhStr.toString()});
@@ -344,13 +386,58 @@ public class StudentPanel extends JPanel {
             JOptionPane.showMessageDialog(this, "Vui lòng chọn sinh viên cần thêm ngoại ngữ.");
             return;
         }
-        String nn = JOptionPane.showInputDialog(this, "Nhập tên ngoại ngữ cần thêm cho sinh viên " + masv + ":");
-        if (nn != null && !nn.trim().isEmpty()) {
-            if (dao.addNgoaiNgu(masv, nn.trim())) {
+
+        JComboBox<String> cbNgoaiNgu = new JComboBox<>();
+        cbNgoaiNgu.addItem("(Thêm ngoại ngữ mới...)");
+
+        List<Document> dsNgoaiNgu = dao.getThongKeNgoaiNgu(""); // Lấy tất cả ngoại ngữ
+        for (Document doc : dsNgoaiNgu) {
+            cbNgoaiNgu.addItem(doc.getString("_id"));
+        }
+
+        JTextField txtNewNn = new JTextField(15);
+        
+        cbNgoaiNgu.addActionListener(e -> {
+            int idx = cbNgoaiNgu.getSelectedIndex();
+            if (idx == 0) {
+                txtNewNn.setText("");
+                txtNewNn.setEditable(true);
+            } else {
+                txtNewNn.setText(cbNgoaiNgu.getSelectedItem().toString());
+                txtNewNn.setEditable(false);
+            }
+        });
+
+        JPanel panel = new JPanel(new GridLayout(2, 2, 5, 5));
+        panel.add(new JLabel("Ngoại ngữ có sẵn:"));
+        panel.add(cbNgoaiNgu);
+        panel.add(new JLabel("Tên ngoại ngữ:"));
+        panel.add(txtNewNn);
+
+        int result = JOptionPane.showConfirmDialog(this, panel, "Thêm Ngoại Ngữ", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            String nn = txtNewNn.getText().trim();
+            if (nn.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập/chọn tên ngoại ngữ.");
+                return;
+            }
+            Document sv = dao.getSinhVienByMasv(masv);
+            if (sv == null) {
+                JOptionPane.showMessageDialog(this, "Sinh viên không tồn tại. Kiểm tra lại mã SV.");
+                return;
+            }
+            
+            List<String> currentLangs = sv.getList("ngoaingu", String.class);
+            if (currentLangs != null && currentLangs.contains(nn)) {
+                JOptionPane.showMessageDialog(this, "Thêm thất bại. Ngôn ngữ '" + nn + "' đã tồn tại cho sinh viên này!");
+                return;
+            }
+            
+            if (dao.addNgoaiNgu(masv, nn)) {
                 JOptionPane.showMessageDialog(this, "Đã thêm ngoại ngữ thành công.");
                 refreshTable();
             } else {
-                JOptionPane.showMessageDialog(this, "Thêm thất bại. Kiểm tra lại mã SV.");
+                JOptionPane.showMessageDialog(this, "Thêm thất bại vì lỗi không xác định.");
             }
         }
     }
@@ -362,12 +449,52 @@ public class StudentPanel extends JPanel {
             return;
         }
         
-        // Custom Dialog for Subject
+        Document sv = dao.getSinhVienByMasv(masv);
+        List<Document> monhocDaHoc = sv != null ? sv.getList("monhoc", Document.class) : new ArrayList<>();
+        List<String> maMonDaHoc = new ArrayList<>();
+        if (monhocDaHoc != null) {
+            for (Document mh : monhocDaHoc) {
+                maMonDaHoc.add(mh.getString("mamon"));
+            }
+        }
+        
+        JComboBox<String> cbMonHoc = new JComboBox<>();
+        cbMonHoc.addItem("(Thêm môn mới...)");
+        
+        List<Document> dsMon = dao.getThongKeMaMonVaTenMon("");
+        for (Document mon : dsMon) {
+            String mamon = mon.getString("mamon");
+            if (!maMonDaHoc.contains(mamon)) {
+                cbMonHoc.addItem(mamon + " - " + mon.getString("tenmon"));
+            }
+        }
+
         JTextField mamonField = new JTextField(10);
         JTextField tenmonField = new JTextField(20);
         JTextField diemField = new JTextField(5);
+        
+        cbMonHoc.addActionListener(e -> {
+            int idx = cbMonHoc.getSelectedIndex();
+            if (idx == 0) {
+                mamonField.setText("");
+                tenmonField.setText("");
+                mamonField.setEditable(true);
+                tenmonField.setEditable(true);
+            } else {
+                String selected = cbMonHoc.getSelectedItem().toString();
+                String[] parts = selected.split(" - ", 2);
+                if (parts.length == 2) {
+                    mamonField.setText(parts[0]);
+                    tenmonField.setText(parts[1]);
+                    mamonField.setEditable(false);
+                    tenmonField.setEditable(false);
+                }
+            }
+        });
 
-        JPanel myPanel = new JPanel(new GridLayout(3, 2, 5, 5));
+        JPanel myPanel = new JPanel(new GridLayout(4, 2, 5, 5));
+        myPanel.add(new JLabel("Môn học có sẵn:"));
+        myPanel.add(cbMonHoc);
         myPanel.add(new JLabel("Mã môn:"));
         myPanel.add(mamonField);
         myPanel.add(new JLabel("Tên môn:"));
@@ -378,18 +505,27 @@ public class StudentPanel extends JPanel {
         int result = JOptionPane.showConfirmDialog(null, myPanel, 
                  "Nhập thông tin môn học mới", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
+            String mamonInput = mamonField.getText().trim();
+            if (mamonInput.isEmpty() || tenmonField.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập/chọn mã môn và tên môn.");
+                return;
+            }
+            if (maMonDaHoc.contains(mamonInput)) {
+                JOptionPane.showMessageDialog(this, "Sinh viên đã học môn này rồi, không thể thêm nữa.");
+                return;
+            }
             try {
                 double diem = Double.parseDouble(diemField.getText().trim());
                 if (diem < 0.0 || diem > 10.0) {
                     JOptionPane.showMessageDialog(this, "Điểm phải từ 0.0 đến 10.0");
                     return;
                 }
-                Document monhoc = new Document("mamon", mamonField.getText().trim())
+                Document monhoc = new Document("mamon", mamonInput)
                         .append("tenmon", tenmonField.getText().trim())
                         .append("diem", diem);
                 if (dao.addMonHoc(masv, monhoc)) {
                     JOptionPane.showMessageDialog(this, "Thêm môn học thành công.");
-                    refreshTable();
+                    searchData();
                 }
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "Điểm không hợp lệ.");
@@ -397,30 +533,200 @@ public class StudentPanel extends JPanel {
         }
     }
 
-    private void updateSubjectScore() {
+    private void updateLanguage() {
         String masv = txtMaSV.getText().trim();
         if (masv.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Vui lòng chọn sinh viên.");
             return;
         }
-        String mamon = JOptionPane.showInputDialog(this, "Nhập MÃ MÔN cần sửa điểm:");
-        if (mamon != null && !mamon.trim().isEmpty()) {
-            String diemStr = JOptionPane.showInputDialog(this, "Nhập ĐIỂM MỚI (0-10):");
-            if (diemStr != null && !diemStr.trim().isEmpty()) {
-                try {
-                    double diemMoi = Double.parseDouble(diemStr.trim());
-                    if (diemMoi < 0.0 || diemMoi > 10.0) {
-                        JOptionPane.showMessageDialog(this, "Điểm phải từ 0.0 đến 10.0");
-                        return;
-                    }
-                    if (dao.updateDiemMonHoc(masv, mamon.trim(), diemMoi)) {
-                        JOptionPane.showMessageDialog(this, "Sửa điểm thành công!");
-                        refreshTable();
-                    } else {
-                        JOptionPane.showMessageDialog(this, "Không tìm thấy SV hoặc mã môn học này!");
-                    }
-                } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(this, "Điểm không hợp lệ.");
+        Document sv = dao.getSinhVienByMasv(masv);
+        if (sv == null) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên.");
+            return;
+        }
+        List<String> ngoaingu = sv.getList("ngoaingu", String.class);
+        if (ngoaingu == null || ngoaingu.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Sinh viên này chưa có ngoại ngữ nào.");
+            return;
+        }
+        JComboBox<String> cbNgoaiNgu = new JComboBox<>(ngoaingu.toArray(new String[0]));
+        JTextField txtNewNn = new JTextField(15);
+        
+        JPanel panel = new JPanel(new GridLayout(2, 2, 5, 5));
+        panel.add(new JLabel("Chọn ngoại ngữ cần sửa:"));
+        panel.add(cbNgoaiNgu);
+        panel.add(new JLabel("Tên ngoại ngữ mới:"));
+        panel.add(txtNewNn);
+        
+        int result = JOptionPane.showConfirmDialog(this, panel, "Sửa Ngoại Ngữ", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            String oldNn = (String) cbNgoaiNgu.getSelectedItem();
+            String newNn = txtNewNn.getText().trim();
+            if (newNn.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập tên ngoại ngữ mới.");
+                return;
+            }
+            if (dao.updateNgoaiNgu(masv, oldNn, newNn)) {
+                JOptionPane.showMessageDialog(this, "Sửa ngoại ngữ thành công!");
+                searchData();
+            } else {
+                JOptionPane.showMessageDialog(this, "Có lỗi xảy ra khi sửa.");
+            }
+        }
+    }
+
+    private void deleteLanguage() {
+        String masv = txtMaSV.getText().trim();
+        if (masv.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn sinh viên.");
+            return;
+        }
+        Document sv = dao.getSinhVienByMasv(masv);
+        if (sv == null) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên.");
+            return;
+        }
+        List<String> ngoaingu = sv.getList("ngoaingu", String.class);
+        if (ngoaingu == null || ngoaingu.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Sinh viên này chưa có ngoại ngữ nào.");
+            return;
+        }
+        JComboBox<String> cbNgoaiNgu = new JComboBox<>(ngoaingu.toArray(new String[0]));
+        
+        JPanel panel = new JPanel(new GridLayout(1, 2, 5, 5));
+        panel.add(new JLabel("Chọn ngoại ngữ cần xóa:"));
+        panel.add(cbNgoaiNgu);
+        
+        int result = JOptionPane.showConfirmDialog(this, panel, "Xóa Ngoại Ngữ", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            String nn = (String) cbNgoaiNgu.getSelectedItem();
+            int confirm = JOptionPane.showConfirmDialog(this, "Xóa ngoại ngữ '" + nn + "'?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                if (dao.deleteNgoaiNgu(masv, nn)) {
+                    JOptionPane.showMessageDialog(this, "Xóa ngoại ngữ thành công!");
+                    searchData();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Có lỗi xảy ra khi xóa.");
+                }
+            }
+        }
+    }
+
+    private void updateSubject() {
+        String masv = txtMaSV.getText().trim();
+        if (masv.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn sinh viên.");
+            return;
+        }
+        Document sv = dao.getSinhVienByMasv(masv);
+        if (sv == null) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên.");
+            return;
+        }
+        List<Document> monhoc = sv.getList("monhoc", Document.class);
+        if (monhoc == null || monhoc.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Sinh viên này chưa có môn học nào.");
+            return;
+        }
+        
+        JComboBox<String> cbMonHoc = new JComboBox<>();
+        for (Document mh : monhoc) {
+            cbMonHoc.addItem(mh.getString("mamon") + " - " + mh.getString("tenmon"));
+        }
+        
+        JTextField tenmonField = new JTextField(20);
+        JTextField diemField = new JTextField(5);
+        
+        cbMonHoc.addActionListener(e -> {
+            int idx = cbMonHoc.getSelectedIndex();
+            if (idx >= 0 && idx < monhoc.size()) {
+                Document mh = monhoc.get(idx);
+                tenmonField.setText(mh.getString("tenmon"));
+                Object diemObj = mh.get("diem");
+                diemField.setText(diemObj != null ? diemObj.toString() : "");
+            }
+        });
+        
+        if (cbMonHoc.getItemCount() > 0) {
+            cbMonHoc.setSelectedIndex(0);
+        }
+
+        JPanel myPanel = new JPanel(new GridLayout(3, 2, 5, 5));
+        myPanel.add(new JLabel("Chọn môn (cần sửa):"));
+        myPanel.add(cbMonHoc);
+        myPanel.add(new JLabel("Tên môn mới:"));
+        myPanel.add(tenmonField);
+        myPanel.add(new JLabel("Điểm mới:"));
+        myPanel.add(diemField);
+
+        int result = JOptionPane.showConfirmDialog(null, myPanel, 
+                 "Sửa thông tin môn học", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            int idx = cbMonHoc.getSelectedIndex();
+            if (idx < 0) return;
+            String mamon = monhoc.get(idx).getString("mamon");
+            String tenmon = tenmonField.getText().trim();
+            if (tenmon.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập tên môn.");
+                return;
+            }
+            try {
+                double diem = Double.parseDouble(diemField.getText().trim());
+                if (diem < 0.0 || diem > 10.0) {
+                    JOptionPane.showMessageDialog(this, "Điểm phải từ 0.0 đến 10.0");
+                    return;
+                }
+                if (dao.updateMonHoc(masv, mamon, tenmon, diem)) {
+                    JOptionPane.showMessageDialog(this, "Sửa môn học thành công!");
+                    searchData();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Có lỗi xảy ra khi sửa!");
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Điểm không hợp lệ.");
+            }
+        }
+    }
+
+    private void deleteSubject() {
+        String masv = txtMaSV.getText().trim();
+        if (masv.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn sinh viên.");
+            return;
+        }
+        Document sv = dao.getSinhVienByMasv(masv);
+        if (sv == null) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên.");
+            return;
+        }
+        List<Document> monhoc = sv.getList("monhoc", Document.class);
+        if (monhoc == null || monhoc.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Sinh viên này chưa có môn học nào.");
+            return;
+        }
+        JComboBox<String> cbMonHoc = new JComboBox<>();
+        for (Document mh : monhoc) {
+            cbMonHoc.addItem(mh.getString("mamon") + " - " + mh.getString("tenmon"));
+        }
+        
+        JPanel panel = new JPanel(new GridLayout(1, 2, 5, 5));
+        panel.add(new JLabel("Chọn môn cần xóa:"));
+        panel.add(cbMonHoc);
+        
+        int result = JOptionPane.showConfirmDialog(this, panel, "Xóa Môn Học", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            int idx = cbMonHoc.getSelectedIndex();
+            if (idx < 0) return;
+            String mamon = monhoc.get(idx).getString("mamon");
+            String displayStr = (String) cbMonHoc.getSelectedItem();
+            
+            int confirm = JOptionPane.showConfirmDialog(this, "Xóa môn học '" + displayStr + "'?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                if (dao.deleteMonHoc(masv, mamon)) {
+                    JOptionPane.showMessageDialog(this, "Xóa môn học thành công!");
+                    searchData();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Có lỗi xảy ra khi xóa!");
                 }
             }
         }
@@ -428,20 +734,8 @@ public class StudentPanel extends JPanel {
 
     private void searchData() {
         String keyword = txtSearch.getText().trim();
-        if (keyword.isEmpty()) {
-            refreshTable();
-            return;
-        }
-        
-        // Cố gắng tìm theo mã SV trước, nếu không có thì tìm theo Lớp
-        Document sv = dao.getSinhVienByMasv(keyword);
-        if (sv != null) {
-            List<Document> result = new ArrayList<>();
-            result.add(sv);
-            loadDataToTable(result);
-        } else {
-            List<Document> list = dao.getSinhVienByLop(keyword);
-            loadDataToTable(list);
-        }
+        String sortType = cbSort != null ? cbSort.getSelectedItem().toString() : "Mặc định";
+        List<Document> list = dao.searchSinhVien(keyword, sortType);
+        loadDataToTable(list);
     }
 }
